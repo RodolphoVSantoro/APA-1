@@ -49,11 +49,11 @@ int main(){
 			tempoMedioBubble+=s_CPU_final - s_CPU_inicial;
 		}
         /*salva o tempo medio entre as "s" execuções*/
-		tempoMedioBubble/=S;
-		fprintf(arqBubble, "%lf %lf\n", (double)(n+1.0)*P, tempoMedioBubble);
-        tempoMedioHeap/=S;
+	tempoMedioBubble/=(double)S;
+	fprintf(arqBubble, "%lf %lf\n", (double)(n+1.0)*P, tempoMedioBubble);
+        tempoMedioHeap/=(double)S;
         fprintf(arqHeap, "%lf %lf\n", (double)(n+1.0)*P, tempoMedioHeap);
-        tempoMedioCaixa/=S;
+        tempoMedioCaixa/=(double)S;
         fprintf(arqCaixa, "%lf %lf\n", (double)(n+1.0)*P, tempoMedioCaixa);
 	}
 	fclose(arqBubble);
