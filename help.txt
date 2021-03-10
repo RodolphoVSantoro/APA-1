@@ -1,0 +1,24 @@
+Existem duas mains no repositório
+Uma cria um arquivo com seeds das sequencias que serão ordenadas (geraSeeds.c)
+A outra ordena essas listas e salva o tempo médio para diferentes (main.c)
+tamanhos de sequência, em ordem, aumentando de 10 em 10
+
+Para executar essas mains, rodar a seguinte sequência de comandos, 
+usando a main adequada no segundo:
+-gcc -c tempocpu.c sort.c seeds.c main.c geraSeeds.c
+-gcc -o executavel main.o tempocpu.o sort.o seeds.o
+
+
+Temos também o arquivo em python que gera os gráficos
+Para a geração dos gráficos, usamos o geogebra
+
+A seguinte versão dava suporte a scripting em python:
+http://test.geogebra.org/~mike/python/
+
+Doc sobre scripting em python no geogebra:
+http://dev.geogebra.org/trac/wiki/Jython
+
+Para executar o script em python, crtl-shift-Y abre a aba do python
+Lá aperte no quadrado duplo no canto superior direito, para desconectar
+a janela de scripting da janela do geogebra
+Copie o script na aba scripting, e execute em "run script" no menu edit
