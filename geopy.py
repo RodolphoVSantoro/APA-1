@@ -7,7 +7,7 @@ def criaPontos(tmp, linhas, cor):
 	tmp.append(p)	
 
 #inserir caminho completo
-file = open("E:/Rodolpho/Documents/UFF/APA/trabalho 1/time.txt", "r")
+file = open("E:/Rodolpho/Documents/UFF/APA/trabalho 1/bubble.txt", "r")
 linhas = file.readlines()
 file.close()
 
@@ -16,14 +16,14 @@ criaPontos(tmp, linhas, Color.RED)
 $listaBubble =  List(*tmp)
 
 tmp = []
-file = open(*arquivo do heap*, "r")
+file = open("E:/Rodolpho/Documents/UFF/APA/trabalho 1/heap.txt", "r")
 linhas = file.readlines()
 file.close()
 criaPontos(tmp, linhas, Color.GREEN)
 $listaHeap =  List(*tmp)
 
 tmp = []
-file = open(*arquivo do caixa*, "r")
+file = open("E:/Rodolpho/Documents/UFF/APA/trabalho 1/caixa.txt", "r")
 linhas = file.readlines()
 file.close()
 criaPontos(tmp, linhas, Color.BLUE)
