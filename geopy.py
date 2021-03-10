@@ -1,10 +1,10 @@
 def criaPontos(tmp, linhas, cor):
 	for linha in linhas:
-	xy = linha.split()
-	p = Point(float(xy[0]), float(xy[1]))
-	p.color = cor
-	p.label_visible = False
-	tmp.append(p)	
+		xy = linha.split()
+		p = Point(float(xy[0]), float(xy[1]))
+		p.color = cor
+		p.label_visible = False
+		tmp.append(p)	
 
 #inserir caminho completo
 file = open("E:/Rodolpho/Documents/UFF/APA/trabalho 1/bubble.txt", "r")
