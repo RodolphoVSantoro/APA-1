@@ -39,14 +39,14 @@ int main(){
 			Tempo_CPU_Sistema(&s_CPU_inicial, &s_total_inicial);
 		    heapsort(v, SIZE(n));
 		    Tempo_CPU_Sistema(&s_CPU_final, &s_total_final);
-			tempoMedioBubble+=s_CPU_final - s_CPU_inicial;
+			tempoMedioHeap+=s_CPU_final - s_CPU_inicial;
 
 			/*Caixa com a sequencia seed(n, s)*/
 			generateSequence("seeds.txt", v, n, s);
 			Tempo_CPU_Sistema(&s_CPU_inicial, &s_total_inicial);
 		    metodoCaixas(v, SIZE(n));
 		    Tempo_CPU_Sistema(&s_CPU_final, &s_total_final);
-			tempoMedioBubble+=s_CPU_final - s_CPU_inicial;
+			tempoMedioCaixa+=s_CPU_final - s_CPU_inicial;
 		}
         /*salva o tempo medio entre as "s" execuções*/
 	tempoMedioBubble/=(double)S;
