@@ -1,6 +1,6 @@
 #include "tempocpu.h"
 
-/*mede tempo de cpu do sistema*/
+/*mede tempo de cpu do sistema em */
 void Tempo_CPU_Sistema(double *seg_CPU_total, double *seg_sistema_total){
   long seg_CPU, seg_sistema, mseg_CPU, mseg_sistema;
   struct rusage ptempo;

@@ -50,7 +50,7 @@ void heapify(int arr[], int tamanhoArr, int i){
     }
 }
 
-void heapsort(int arr[], int tamanhoArr){
+void heapSort(int arr[], int tamanhoArr){
     /*construindo a heap - usando maxheap*/
     for(int i = tamanhoArr/2-1; i>=0; i--) heapify(arr, tamanhoArr, i);
 

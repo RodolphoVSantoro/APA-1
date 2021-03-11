@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "seeds.h"
 #include "sort.h"
 #include "tempocpu.h"
@@ -15,7 +16,7 @@ L = limite superior para rng
 
 
 int main(){	
-	int v[N*P];
+	int *v = (int*)malloc(sizeof(int)*N*P);
 	int n, s;
 	double s_CPU_inicial, s_total_inicial, s_CPU_final, s_total_final;
 	double tempoMedioBubble, tempoMedioHeap, tempoMedioCaixa;
@@ -33,14 +34,15 @@ int main(){
 		    metodoBolha(v, SIZE(n));
 		    Tempo_CPU_Sistema(&s_CPU_final, &s_total_final);
 			tempoMedioBubble+=s_CPU_final - s_CPU_inicial;
-
+			printf("%lf\n", tempoMedioBubble);
+			
 			/*heap com a sequencia seed(n, s)*/
 			generateSequence("seeds.txt", v, n, s);
 			Tempo_CPU_Sistema(&s_CPU_inicial, &s_total_inicial);
 		    heapsort(v, SIZE(n));
 		    Tempo_CPU_Sistema(&s_CPU_final, &s_total_final);
 			tempoMedioHeap+=s_CPU_final - s_CPU_inicial;
-
+			
 			/*Caixa com a sequencia seed(n, s)*/
 			generateSequence("seeds.txt", v, n, s);
 			Tempo_CPU_Sistema(&s_CPU_inicial, &s_total_inicial);
@@ -48,14 +50,19 @@ int main(){
 		    Tempo_CPU_Sistema(&s_CPU_final, &s_total_final);
 			tempoMedioCaixa+=s_CPU_final - s_CPU_inicial;
 		}
-        /*salva o tempo medio entre as "s" execuções*/
-	tempoMedioBubble/=(double)S;
-	fprintf(arqBubble, "%lf %lf\n", (double)(n+1.0)*P, tempoMedioBubble);
+		printf("------------\n\n\n");
+        /*salva o tempo medio entre as "s" execuções em miliSegundos*/
+		tempoMedioBubble*=1000;
+		tempoMedioBubble/=(double)S;
+		fprintf(arqBubble, "%lf %lf\n", (double)(n+1.0)*P, tempoMedioBubble);
+		tempoMedioHeap*=1000;
         tempoMedioHeap/=(double)S;
         fprintf(arqHeap, "%lf %lf\n", (double)(n+1.0)*P, tempoMedioHeap);
+		tempoMedioCaixa*=1000;
         tempoMedioCaixa/=(double)S;
         fprintf(arqCaixa, "%lf %lf\n", (double)(n+1.0)*P, tempoMedioCaixa);
 	}
+	free(v);
 	fclose(arqBubble);
 	fclose(arqHeap);
 	fclose(arqCaixa);

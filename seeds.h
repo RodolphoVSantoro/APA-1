@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define N (1000)
+#define N (10000)
 #define P (10)
 #define S (10)
 #define L (10000)
