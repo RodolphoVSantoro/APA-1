@@ -4,7 +4,7 @@ A outra ordena essas listas e salva o tempo médio para diferentes (main.c)
 tamanhos de sequência, em ordem, aumentando de 10 em 10
 
 Para executar essas mains, rodar a seguinte sequência de comandos, 
-usando a main adequada no segundo:
+usando a main adequada no segundo comando(trocar main.o por geraSeeds.o):
 -gcc -c tempocpu.c sort.c seeds.c main.c geraSeeds.c
 -gcc -o executavel main.o tempocpu.o sort.o seeds.o
 
