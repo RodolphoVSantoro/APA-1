@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define N (10000)
-#define P (10)
+#define N (450)
+#define P (25)
 #define S (10)
-#define L (10000)
+#define L (1000000)
 #define SIZE(n) ((n+1)*P)
 
 

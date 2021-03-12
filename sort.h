@@ -10,7 +10,7 @@ void metodoBolha(int arr[], int tamanhoArr);
 
 /*Heap Sort*/
 void heapify(int arr[], int tamanhoArr, int i);
-void heapsort(int arr[], int tamanhoArr);
+void heapSort(int arr[], int tamanhoArr);
 
 /*Método das Caixas*/
 void metodoCaixas(int arr[], int tamanhoArr);
