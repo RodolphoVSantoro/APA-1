@@ -10,7 +10,6 @@ def criaPontos(tmp, linhas, cor):
 file = open("E:/Rodolpho/Documents/UFF/APA/trabalho 1/bubble.txt", "r")
 linhas = file.readlines()
 file.close()
-
 tmp = []
 criaPontos(tmp, linhas, Color.RED)
 $listaBubble =  List(*tmp)
@@ -31,4 +30,4 @@ $listaCaixa =  List(*tmp)
 
 command("Fit(listaBubble, {x^2, x})")
 command("Fit(listaHeap, {x*log(x)})")
-command("FitLine(listaCaixa)")
+command("Fit(listaCaixa, {x, 1})")
