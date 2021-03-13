@@ -31,4 +31,4 @@ $listaCaixa =  List(*tmp)
 
 command("Fit(listaBubble, {x^2, x})")
 command("Fit(listaHeap, {x*log(x)})")
-command("Fit(listaCaixa, {x})")
+command("FitLine(listaCaixa)")
