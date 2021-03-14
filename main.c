@@ -52,22 +52,23 @@ int main(){
 			/*Caixa com a sequencia seed(n, s)*/
 			generateSequence("seeds.txt", v, n, s);
 			Tempo_CPU_Sistema(&s_CPU_inicial, &s_total_inicial);
-			for(int i=0;i<50;i++){
+			for(int i=0;i<100;i++){
 				for(int j=0;j<SIZE(n);j++){
 					v2[j]=v[j];
 				}
 		    	metodoCaixas(v2, SIZE(n));
 		    }
 		    Tempo_CPU_Sistema(&s_CPU_final, &s_total_final);
-			tempoMedioCaixa+=(s_CPU_final - s_CPU_inicial)/50.0;
+			tempoMedioCaixa+=(s_CPU_final - s_CPU_inicial)/100.0;
 		}
         /*salva o tempo medio entre as "s" execuções em microSegundos*/
-		tempoMedioBubble*=1000 * 1000;
+		/*tempoMedioBubble*=1000 * 1000;
 		tempoMedioBubble/=(double)S;
 		fprintf(arqBubble, "%lf %lf\n", (double)(n+1.0)*P, tempoMedioBubble);
 		tempoMedioHeap*=1000 * 1000;
         tempoMedioHeap/=(double)S;
         fprintf(arqHeap, "%lf %lf\n", (double)(n+1.0)*P, tempoMedioHeap);
+        */
 		tempoMedioCaixa*=1000 * 1000;
         tempoMedioCaixa/=(double)S;
         fprintf(arqCaixa, "%lf %lf\n", (double)(n+1.0)*P, tempoMedioCaixa);

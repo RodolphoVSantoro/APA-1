@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define N (450)
+#define N (1250)
 #define P (25)
 #define S (10)
-#define L (1000000)
+#define L (100000)
 #define SIZE(n) ((n+1)*P)
 
 
@@ -31,3 +31,6 @@ cria uma sequencia em *v
 a partir da seed correspondente a seed(n, s)
 */
 void generateSequence(char fname[] ,int *v, int n, int s);
+
+/*cria sequencia com valores abaixo de l*/
+void generateSequenceLim(char fname[] ,int *v, int n, int s, int l);
